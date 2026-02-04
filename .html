@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #111112;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background-image: radial-gradient(circle at 20% 40%, #222226 0%, transparent 60%),
+                              radial-gradient(circle at 80% 70%, #18181a 0%, transparent 70%),
+                              url('https://www.transparenttextures.com/patterns/stardust.png');
+        }
+        header {
+            text-align: center;
+            padding: 2rem 0 1rem 0;
+            background: rgba(30, 30, 30, 0.15); /* almost transparent */
+            box-shadow: 0 2px 12px 0 #0003;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 0.12em;
+            color: #e0e0e0;
+            text-shadow: 0 0 16px #222226, 0 0 32px #18181a;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .artwork {
+            background: rgba(34, 34, 36, 0.98);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px 0 #000c, 0 0 24px 2px #22222644;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .artwork:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 32px 0 #000e, 0 0 32px 4px #222226;
+        }
+        .artwork img {
+            width: 100%;
+            display: block;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 2px solid #222226;
+            background: #18181a;
+        }
+        .artwork .desc {
+            padding: 1rem;
+        }
+        .artwork .desc h2 {
+            margin: 0 0 0.5rem 0;
+            color: #e0e0e0;
+            font-size: 1.1rem;
+        }
+        .artwork .desc p {
+            margin: 0;
+            color: #b0b0b0;
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: right;
+            padding: 1.5rem 2rem 1rem 0;
+            color: #888;
+            font-size: 1rem;
+            background: rgba(30, 30, 30, 0.10); /* almost transparent */
+            margin-top: 2rem;
+        }
+        @media (max-width: 600px) {
+            .gallery {
+                padding: 1rem;
+                gap: 1rem;
+            }
+            .artwork img {
+                height: 140px;
+            }
+            footer {
+                padding-right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>html</h1>
+        <p style="font-size:1.1rem; opacity:0.8;">Dark cosmic-inspired collection</p>
+    </header>
+    <main>
+        <section style="max-width: 700px; margin: 2rem auto 0 auto; text-align: center; background: rgba(30,30,30,0.25); border-radius: 12px; padding: 1.5rem 1rem 1rem 1rem; box-shadow: 0 2px 12px 0 #0002;">
+            <p style="font-size:1.15rem; margin-bottom:0.7rem; color:#e0e0e0;">I create art prints that put emotions and atmosphere center stage. From the intense energy of storms to the silent mystique of the night sky, each piece is designed to evoke a feeling and add a meaningful focal point to your home.</p>
+            <a href="https://9taiilzart.etsy.com" target="_blank" style="display:inline-block; margin-top:0.5rem; padding:0.6em 1.2em; background:#23232a; color:#fff; border-radius:8px; text-decoration:none; font-weight:600; letter-spacing:0.04em; box-shadow:0 2px 8px #0003; transition:background 0.2s;">Shop Art Prints on Etsy</a>
+        </section>
+        <div class="gallery">
+            <div class="artwork"><img src="assets/art12k.jpg" alt="Artwork 1"><div class="desc"><h2>Artwork 1</h2></div></div>
+            <div class="artwork"><img src="assets/art22k.jpg" alt="Artwork 2"><div class="desc"><h2>Artwork 2</h2></div></div>
+            <div class="artwork"><img src="assets/art42k.jpg" alt="Artwork 3"><div class="desc"><h2>Artwork 3</h2></div></div>
+            <div class="artwork"><img src="assets/art52k.jpg" alt="Artwork 4"><div class="desc"><h2>Artwork 4</h2></div></div>
+            <div class="artwork"><img src="assets/art62k.jpg" alt="Artwork 5"><div class="desc"><h2>Artwork 5</h2></div></div>
+            <div class="artwork"><img src="assets/art72k.jpg" alt="Artwork 6"><div class="desc"><h2>Artwork 6</h2></div></div>
+            <div class="artwork"><img src="assets/art82k.jpg" alt="Artwork 7"><div class="desc"><h2>Artwork 7</h2></div></div>
+            <div class="artwork"><img src="assets/art92k.jpg" alt="Artwork 8"><div class="desc"><h2>Artwork 8</h2></div></div>
+        </div>
+    </main>
+    <footer>
+        right reserved 9TaiilzArt
+    </footer>
+</body>
+</html>
