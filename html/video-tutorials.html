@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Tutorials - 9TaiilzArt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #111112;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background-image: radial-gradient(circle at 20% 40%, #222226 0%, transparent 60%),
+                              radial-gradient(circle at 80% 70%, #18181a 0%, transparent 70%),
+                              url('https://www.transparenttextures.com/patterns/stardust.png');
+        }
+        header {
+            text-align: center;
+            padding: 2rem 0 1rem 0;
+            background: rgba(30, 30, 30, 0.15);
+            box-shadow: 0 2px 12px 0 #0003;
+        }
+        header h1 {
+            margin: 0.5rem 0;
+            color: #e0e0e0;
+            font-size: 2.5rem;
+        }
+        nav {
+            margin: 1rem 0;
+        }
+        nav a {
+            color: #b0b0ff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            transition: background 0.2s;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .video-section {
+            background: rgba(34, 34, 36, 0.98);
+            border-radius: 18px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 24px 0 #000c, 0 0 24px 2px #22222644;
+        }
+        .video-section h2 {
+            color: #e0e0e0;
+            font-size: 2rem;
+            margin: 0 0 1rem 0;
+            border-bottom: 2px solid #444;
+            padding-bottom: 0.5rem;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .video-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #888;
+        }
+        .video-placeholder svg {
+            width: 80px;
+            height: 80px;
+            fill: #444;
+        }
+        .plan-section {
+            background: rgba(30, 30, 35, 0.8);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .plan-section h3 {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+        .plan-section h3:first-child {
+            margin-top: 0;
+        }
+        .plan-section h4 {
+            color: #90d7ff;
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem 0;
+        }
+        .plan-section ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+            line-height: 1.8;
+        }
+        .plan-section li {
+            margin: 0.5rem 0;
+            color: #d0d0d0;
+        }
+        .plan-section p {
+            line-height: 1.8;
+            color: #d0d0d0;
+            margin: 0.5rem 0;
+        }
+        .plan-section strong {
+            color: #ffa500;
+        }
+        .checklist {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid #4CAF50;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .checklist h4 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        .storyboard {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .storyboard-item {
+            margin: 0.75rem 0;
+            padding: 0.5rem;
+            border-left: 3px solid #90d7ff;
+            background: rgba(144, 215, 255, 0.05);
+        }
+        footer {
+            text-align: right;
+            padding: 1.5rem 2rem 1rem 0;
+            color: #888;
+            font-size: 1rem;
+            background: rgba(30, 30, 30, 0.10);
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+            .video-section {
+                padding: 1.5rem 1rem;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎬 Video Tutorials - 9TaiilzArt</h1>
+        <p style="font-size:1.1rem; opacity:0.8;">Zeichentechniken für Anfänger und Fortgeschrittene</p>
+        <nav>
+            <a href="index.html">← Zurück zur Galerie</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Video #1: Die magische Linie -->
+        <section class="video-section">
+            <h2>🎨 Video #1: Die magische Linie</h2>
+            <p style="font-size: 1.1rem; color: #b0b0b0; margin-bottom: 1.5rem;">
+                Vom Strich zur Form in 30 Sekunden - Die fundamentale Grundlage jeder Zeichnung
+            </p>
+
+            <div class="video-container">
+                <!-- Placeholder for video - can be replaced with YouTube embed, local video, or other source -->
+                <div class="video-placeholder">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                    </svg>
+                    <p>Video wird hier eingebettet</p>
+                    <p style="font-size: 0.9rem;">YouTube, Vimeo oder lokale Datei</p>
+                </div>
+                <!-- Example YouTube embed (replace VIDEO_ID with actual video ID):
+                <iframe 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                -->
+                <!-- Example local video:
+                <video controls>
+                    <source src="assets/videos/magic-line.mp4" type="video/mp4">
+                    Dein Browser unterstützt das Video-Tag nicht.
+                </video>
+                -->
+            </div>
+
+            <!-- Production Plan -->
+            <div class="plan-section">
+                <h3>📋 Detaillierter Produktionsplan</h3>
+                <p style="font-size: 1rem; color: #90d7ff;">
+                    <strong>Ziel:</strong> Ein professionelles 30-Sekunden-Tutorial über die Grundlagen des Zeichnens - "Die magische Linie"
+                </p>
+
+                <h3>A. Vorproduktion (Vorbereitung) - 30 Minuten</h3>
+                
+                <h4>Material & Equipment (Alles bereitlegen):</h4>
+                <ul>
+                    <li><strong>Zeichenmaterial:</strong> Glattes, weißes A4- oder A5-Papier, ein gut gespitzter 2B-Bleistift, ein Radiergummi (nur für Notfälle).</li>
+                    <li><strong>Equipment:</strong> Smartphone oder Kamera auf Stativ. Zwei Lichtquellen (z.B. Tageslichtlampen oder heller Raum am Tag). Eventuell ein Laser-Level, um die Kamera genau senkrecht über dem Tisch auszurichten.</li>
+                    <li><strong>Vorarbeit:</strong> Zeichne drei sehr leichte, kaum sichtbare Punkte mit Bleistift auf das Papier, die die Endpunkte deiner drei Hauptlinien vorgeben. Das hilft dir, während der Aufnahme präzise und ohne Zögern zu zeichnen. Das finale Motiv (z.B. eine einfache Tasse oder ein Blatt) sollte in deinem Kopf sitzen.</li>
+                </ul>
+
+                <h4>Setup & Storyboard (Der Drehplan):</h4>
+                <ul>
+                    <li><strong>Kameraposition:</strong> Stative direkt senkrecht über dem Papier. Papier mittig und gerade ausgerichtet. Zoom/Fokus so einstellen, dass das gesamte Blatt scharf zu sehen ist, mit etwas Rand. Aufnahme in 4K, falls möglich, für spätere Detail-Zoom-Ins.</li>
+                    <li><strong>Beleuchtung:</strong> Positioniere die Lichter im 45°-Winkel links und rechts von der Zeichenfläche, um störende Handschatten zu minimieren. Teste eine kurze Aufnahme: Die Hand und der Strich müssen scharf und hell zu sehen sein.</li>
+                </ul>
+
+                <h4>Storyboard (Shot für Shot):</h4>
+                <div class="storyboard">
+                    <div class="storyboard-item">
+                        <strong>Sekunde 0-3 (Der Hook):</strong> Leeres Blatt. Die Hand greift den Bleistift und setzt präzise an. Texteinblendung groß: "Alles beginnt mit einer Linie."
+                    </div>
+                    <div class="storyboard-item">
+                        <strong>Sekunde 3-10 (Die Basis-Form):</strong> Hand zeichnet drei entscheidende Linien in normaler Geschwindigkeit (kein Zeitraffer):
+                        <ol style="margin: 0.5rem 0 0.5rem 1.5rem;">
+                            <li>Geschwungene Linie (oberer Tassenrand).</li>
+                            <li>Leicht gekrümmte Linie (Tassenseite).</li>
+                            <li>Kurve (Unterteil).</li>
+                        </ol>
+                        Danach kurz innehalten, die Form ist erkennbar.
+                    </div>
+                    <div class="storyboard-item">
+                        <strong>Sekunde 10-22 (Die Vollendung im Zeitraffer):</strong> <em>Hier schaltest du auf 2-3x Geschwindigkeit.</em> Die Hand zeichnet den Henkel, fügt einen zweiten, parallel geführten Strich für die Tassendicke hinzu, setzt einen kleinen Deckelstrich und einen einfachen, schattierenden Strich auf der Schattenseite.
+                    </div>
+                    <div class="storyboard-item">
+                        <strong>Sekunde 22-30 (Der Payoff & CTA):</strong> Letzte normale Einstellung auf die fertige, einfache Zeichnung. Texteinblendung: "Übe das Sehen von Grundformen." Letzter Frame: Dein Kanal-Name/Logo und die Aufforderung: "Nächste Technik: Schraffur! ▶️"
+                    </div>
+                </div>
+
+                <h3>B. Produktion (Aufnahme) - 15-20 Minuten</h3>
+                <ul>
+                    <li><strong>Hauptaufnahme:</strong> Starte die Kamera. Führe das Storyboard genau aus. Zeichne langsamer und kontrollierter als du denkst. Ein ruhiger, sicherer Strich wirkt professionell.</li>
+                    <li><strong>Sicherheitsaufnahmen:</strong> Mache nach der Hauptaufnahme zwei zusätzliche Takes für den Fall von Fehlern. Fotografiere außerdem ein hochauflösendes Bild vom Endergebnis (Finale).</li>
+                    <li><strong>B-Roll & Details:</strong> Nimm 10 Sekunden Nahaufnahme (Makro) deiner Hand auf, wie sie den Bleistift richtig hält. Nimm 15 Sekunden leeres Blatt mit schönem Licht für mögliche Intro-/Outro-Überblendungen auf.</li>
+                </ul>
+
+                <h3>C. Postproduktion (Schnitt) - 45-60 Minuten</h3>
+                
+                <h4>Software:</h4>
+                <p>Nutze <strong>CapCut</strong>, <strong>DaVinci Resolve</strong> (kostenlos) oder dein bevorzugtes Programm.</p>
+
+                <h4>Workflow:</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Importiere alle Clips.</li>
+                    <li><strong>Hauptspur:</strong> Lege die beste Hauptaufnahme in die Timeline.</li>
+                    <li><strong>Beschneiden & Tempo:</strong> Schneide Leerlauf am Anfang/Ende weg. Beschleunige den Zeitraffer-Teil (Sekunde 10-22) auf 200-250%. Die Gesamtlänge muss auf 30 Sekunden getrimmt werden.</li>
+                    <li><strong>Texteinblendungen:</strong> Füge die drei Texte ein ("Alles beginnt...", "Grundformen", "Nächste Technik..."). Nutze eine klare, fette Schrift (weiß mit schwarzem Rand) und halte sie kurz (je 3 Sekunden).</li>
+                    <li><strong>Ton:</strong> Suche eine ruhige, instrumentale Hintergrundmusik (z.B. "lofi study beats") auf einer lizenzfreien Plattform. Lege sie unter und stelle die Lautstärke so ein, dass sie kaum hörbar ist (ca. -20dB). Füge an den Anfang und das Ende einen sanften Audio-Fade hinzu.</li>
+                    <li><strong>Feinschliff:</strong> Füge am Anfang und Ende einen kurzen, weichen Übergang (z.B. "Fade to Black") hinzu. Achte darauf, dass der Fokus während des gesamten Videos scharf auf der Zeichenhand liegt.</li>
+                    <li><strong>Export:</strong> Exportiere im 9:16 Format (1080x1920 Pixel) für Shorts/Reels. Wähle eine hohe Bitrate für gute Qualität.</li>
+                </ol>
+
+                <div class="checklist">
+                    <h4>🚀 Schnell-Checkliste vor dem Dreh</h4>
+                    <ul>
+                        <li>Kamera auf Stativ, senkrecht, 4K/1080p</li>
+                        <li>Zwei Lichter an, keine störenden Schatten</li>
+                        <li>Mikrofon aus/Stumm (oder ruhige Umgebung)</li>
+                        <li>Bleistift gespitzt, Papier mit leichten Vorzeichnungen</li>
+                        <li>Storyboard / Ablauf im Kopf</li>
+                        <li>Speicherkarte mit Platz, Akku voll</li>
+                    </ul>
+                </div>
+
+                <h3>💡 Wichtige Hinweise</h3>
+                <p>Mit diesem Plan kannst du das Video effizient und mit professionellem Ergebnis produzieren. Dieses exakte Vorgehen (Vorbereitung, klare Shot-Liste, strukturierter Schnitt) ist der Blueprint für alle folgenden 14 Videos.</p>
+                <p style="margin-top: 1.5rem;">
+                    <strong>Nächste Schritte:</strong><br>
+                    - Möchtest du das Storyboard für Video #2 ("Schraffur-ABC") haben?<br>
+                    - Oder soll ein generischer Intro/Outro-Vorspann für deine gesamte Serie entworfen werden?
+                </p>
+            </div>
+
+            <!-- Technical Information -->
+            <div class="plan-section" style="margin-top: 2rem; background: rgba(50, 30, 80, 0.3);">
+                <h3>🎥 Video-Embedding Optionen</h3>
+                <p>Um dein fertiges Video hier anzuzeigen, hast du mehrere Möglichkeiten:</p>
+                
+                <h4>Option 1: YouTube</h4>
+                <p>Lade dein Video auf YouTube hoch und ersetze die Zeile mit der YouTube-Embed-URL:</p>
+                <pre style="background: #000; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; color: #0f0;">
+&lt;iframe 
+    src="https://www.youtube.com/embed/DEINE_VIDEO_ID" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen&gt;
+&lt;/iframe&gt;</pre>
+
+                <h4>Option 2: Vimeo</h4>
+                <p>Lade dein Video auf Vimeo hoch:</p>
+                <pre style="background: #000; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; color: #0f0;">
+&lt;iframe 
+    src="https://player.vimeo.com/video/DEINE_VIDEO_ID" 
+    allow="autoplay; fullscreen; picture-in-picture" 
+    allowfullscreen&gt;
+&lt;/iframe&gt;</pre>
+
+                <h4>Option 3: Lokale Datei</h4>
+                <p>Speichere das Video in einem Ordner (z.B. html/assets/videos/) und verlinke es direkt:</p>
+                <pre style="background: #000; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; color: #0f0;">
+&lt;video controls&gt;
+    &lt;source src="assets/videos/magic-line.mp4" type="video/mp4"&gt;
+    Dein Browser unterstützt das Video-Tag nicht.
+&lt;/video&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Placeholder for future videos -->
+        <section class="video-section" style="opacity: 0.6;">
+            <h2>🎨 Video #2: Schraffur-ABC (Kommt bald)</h2>
+            <p style="color: #888;">Das nächste Tutorial über Schattierungs- und Schraffiertechniken</p>
+        </section>
+
+        <section class="video-section" style="opacity: 0.6;">
+            <h2>🎨 Video #3-15: Weitere Techniken (In Planung)</h2>
+            <p style="color: #888;">Die komplette Serie mit 15 fundamentalen Zeichentechniken</p>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 9TaiilzArt - Alle Rechte vorbehalten
+    </footer>
+</body>
+</html>
